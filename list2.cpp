@@ -10,11 +10,12 @@ class node{
         this->next=NULL;
     }
 };
-void insertathead(node * &head,int data){
+void insertattail(node * &tail,int data){//ending node ke agge new node add karega 
+
 //new node 
 node *temp=new node(data);
-temp->next=head;
-head=temp;
+tail->next=temp;
+tail=temp;
 }
 void print(node * &head){
     node *ptr=head;
@@ -27,8 +28,9 @@ void print(node * &head){
 int main(){
     node * node1=new node(10);
     node *head=node1;
+    node *tail=node1;
     print(head);
-    insertathead(head,12);
+    insertattail(tail,12);
     print(head);
 
 }
