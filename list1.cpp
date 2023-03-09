@@ -24,6 +24,18 @@ void print(node * &head){
     }
     
 }
+void insertatmiddle(node * &head,int position,int data){
+    node *temp=head;
+    int cnt=1;
+    while(cnt<position-1){
+        temp=temp->next;
+        cnt++;
+    }
+    node *insertion=new node(data);
+    insertion->next=temp->next;
+    temp->next=insertion;
+
+}
 int main(){
     node * node1=new node(10);
     node *head=node1;
