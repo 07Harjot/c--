@@ -23,7 +23,15 @@ void addnodeatright(node *&head,int data){
     temp->next=NULL;
 
 }
+void insertathead(node *&head,int data){
+    node *temp=new node(data);
+    temp->next=head;
+    head=temp;
+}
 void insert(node *&head,int data,int position){
+    if(position==1){
+
+    }
 
     node *temp=new node(data);
     node *ptr=head;
@@ -50,6 +58,6 @@ int main(){
     addnodeatleft(head,90);
      addnodeatleft(head,60);
       addnodeatleft(head,50);
-    insert(head,46,2);
+    insert(head,46,3);
 print(head);
 }
