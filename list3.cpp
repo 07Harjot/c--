@@ -50,6 +50,9 @@ void print(node *head){
         ptr=ptr->next;
     }
 }
+void delete(node *&head,int position){
+    
+}
 int main(){
     node *n=new node(30);
     node *head=n;
